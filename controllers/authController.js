@@ -73,3 +73,12 @@ export const hireMe = async(req,res)=>{
         })
     }
 }
+
+export const getUsers = async (req,res)=>{
+    try {
+        const users = ContactDetail.find({})
+        res.send(users)
+    } catch (error) {
+        res.send(users)
+    }
+}
